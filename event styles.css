@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Adjust spacing */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 200vh; /* Allows scrolling */
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Blurred Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('a!.png') no-repeat center center/cover;
+    filter: blur(8px); /* Adjust blur intensity */
+    z-index: -1; /* Keeps it behind the content */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    border-radius: 50%;
+    width: 80px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Centered Event Title */
+.event-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    font-weight: bold;
+}
+
+/* Scroll-down Sections */
+.scroll-section {
+    
+        margin-bottom: 50px; /* Adjust the value as needed */
+    
+    
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.7); /* Transparent black */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+    transition: 0.2s;
+    color: white;
+    backdrop-filter: blur(5px);
+    position: relative;
+    top: 120vh; /* Initially hidden */
+    opacity: 10px;
+    transform: translateY(0px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Visible Class (After Scrolling) */
+.scroll-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Event Heading */
+.event-heading {
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* Event Info */
+.event-info {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Event Gallery */
+.event-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-gallery img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Hover Effect on Images */
+.event-gallery img:hover {
+    transform: scale(1.05);
+}
+/* Footer Styles */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    color: white;
+    font-size: 16px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+/* Footer Styles */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    color: white;
+    font-size: 16px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
